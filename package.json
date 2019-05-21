@@ -11,6 +11,7 @@
     "docs": "typedoc --out ./api-reference --mode file ./src/",
     "lint": "tslint --project tsconfig.json --config tslint.json \"src/**/*.ts\"",
     "prepublishOnly": "rimraf ./dist && npm run ts",
+    "prepare": "rimraf ./dist && npm run ts",
     "test": "npm run lint",
     "ts": "tsc",
     "ts:watch": "tsc -w"
