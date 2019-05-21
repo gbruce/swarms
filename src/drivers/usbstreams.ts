@@ -61,7 +61,7 @@ export class OutStream extends Writable {
 
 	_write(chunk: Buffer, encoding: string, callback: (err?: Error) => void) {
 		this.endpoint.transfer(chunk, err => {
-			callback(new Error(err));
+			callback(err);
 		});
 	}
 
